@@ -1,0 +1,261 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    background: #C5E4E7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    margin-bottom: 88px
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    width: 920px;
+    height: 481px;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px;
+}
+
+.config-section{
+    margin: 45px 48px 48px 48px;
+    width: 379px;
+    height: 378px;
+}
+
+.config-label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.config-label .msg-bill, .config-label .msg-people{
+    display: none;
+}
+
+.config-label .msg-bill.error, .config-label .msg-people.error{
+    display: inline;
+    color: #E17457;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 700;
+    color: #5E7A7D;
+}
+
+.config-input{
+    border-style: none;
+    background: #F3F9FA;
+    border-radius: 5px;
+    width: 379px;
+    height: 48px;
+    margin-bottom: 40px;
+    text-align: right;
+    color: #00474B;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px 17px;
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 17px;
+    outline-color: #26C2AE;
+}
+
+
+.config-input.bill{
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 17px;
+}
+
+.config-input.bill.error{
+    border: 2px solid#E17457;
+    outline-color: #E17457;
+}
+
+.config-input.people{
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 17px;
+}
+
+.config-input.people.error{
+    border: 2px solid#E17457;
+    outline-color: #E17457;
+}
+
+#tip{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 40px;
+} 
+
+#tip input{
+    width: 117px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    background: #00474B;
+}
+
+#tip input:last-of-type{
+    background: #F3F9FA;
+    color: #547878;
+    text-align: center;
+}
+
+#tip input:focus:not(:last-child){
+    background: #26C2AE;
+    color: #00474B;
+}
+
+#tip input:hover:not(:last-child){
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+
+#tip .custom:hover{
+    cursor: pointer;
+}
+
+#tip .custom:focus{
+    outline-color: #26C2AE;
+}
+
+.result-section{
+    width: 413px;
+    height: 417px;
+    border-radius: 15px;
+    background: #00474B;
+    margin: 32px 32px 32px 0px;
+}
+
+.res-tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+.res-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px 110px 40px;
+}
+
+.res-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.res-description{
+    font-size: 13px;
+    font-weight: 700;
+    color: #7F9D9F;
+}
+
+#tip-amount, #total{
+    font-size: 48px;
+    font-weight: 700;
+    color: #26C2AE;
+}
+
+#reset-btn{
+    width: 333px;
+    height: 48px;
+    border-radius: 5px;
+    border-style: none;
+    background: #26C2AE;
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+
+#reset-btn:disabled{
+    background: #0D686D;
+    color: #00474B;
+}
+
+@media screen and (max-width: 400px) {
+
+    body{
+        flex-direction: column;
+    }
+    
+    #logo{
+        margin-top: 50px;
+        margin-bottom: 41px;
+    }
+
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 789px;
+    }
+
+    .config-section{
+        width: 311px;
+        height: 436px;
+        margin: 0px;
+    }
+
+    .config-input{
+        width: 311px;
+        margin-bottom: 32px;
+    }
+
+    #tip input{
+        width: 146px;
+    }
+
+    .result-section{
+        width: 327px;
+        height: 257px;
+        margin: 0px;
+    }
+
+    .res-tip{
+        margin: 32px 24px 20px 22px;
+    }
+
+    .res-total{
+        margin: 0px 24px 32px 22px;
+    }
+
+    #tip-amount, #total{
+        font-size: 32px;
+    }
+    
+    #reset-btn{
+        width: 281px;
+        margin-left: 24px;
+    }
+}
