@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [SPLITTER App](https://emmyz.github.io/tip-calculator-app/)
+- Live Site URL: [SPLITTER App](https://emmyz.github.io/splitter/)
 
 ### Built with
 
